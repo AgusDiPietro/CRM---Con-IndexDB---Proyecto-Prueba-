@@ -9,23 +9,7 @@
         conectarDB();
     });
 
-    function conectarDB() {
-        // ABRIR CONEXIÓN EN LA BD:
-
-        let abrirConexion = window.indexedDB.open('crm', 1);
-
-        // si hay un error, lanzarlo
-        abrirConexion.onerror = function() {
-            console.log('Hubo un error');
-        };
     
-        // si todo esta bien, asignar a database el resultado
-        abrirConexion.onsuccess = function() {
-            // guardamos el resultado
-            DB = abrirConexion.result;
-        };
-    }
-
 
     function validarCliente(e) {
         e.preventDefault();
